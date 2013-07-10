@@ -1,4 +1,4 @@
-package rs.com.teste.model;
+package rs.com.teste.exception;
 
 public class ErrorValidacao {
 	

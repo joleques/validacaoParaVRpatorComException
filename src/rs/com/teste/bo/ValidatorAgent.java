@@ -1,11 +1,13 @@
-package rs.com.teste.model;
+package rs.com.teste.bo;
 
-import rs.com.teste.controller.ValidadorException;
+import rs.com.teste.exception.ErrorValidacao;
+import rs.com.teste.exception.ValidadorException;
+import rs.com.teste.model.Agent;
 
 
-public class ValidadorPessoa extends ValidadorGenericAbstract<Pessoa> {
+public class ValidatorAgent extends ValidatorGenericAbstract<Agent> {
 	
-	public ValidadorPessoa(Pessoa pessoa) {
+	public ValidatorAgent(Agent pessoa) {
 		super(pessoa);
 	}
 
@@ -17,6 +19,16 @@ public class ValidadorPessoa extends ValidadorGenericAbstract<Pessoa> {
 		} catch (ValidadorException e) {
 			
 		}
+	}
+
+	public void validarAPI() throws ValidadorException{
+		validaAPI();
+		temErro();
+	}
+	
+	private void validaAPI() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private void validadorRegras() {

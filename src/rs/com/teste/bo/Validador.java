@@ -1,8 +1,9 @@
-package rs.com.teste.model;
+package rs.com.teste.bo;
 
 import java.util.List;
 
-import rs.com.teste.controller.ValidadorException;
+import rs.com.teste.exception.ErrorValidacao;
+import rs.com.teste.exception.ValidadorException;
 
 public interface Validador<T> {
 

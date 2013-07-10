@@ -3,8 +3,9 @@ package rs.com.teste.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import rs.com.teste.model.ErrorValidacao;
-import rs.com.teste.model.Validador;
+import rs.com.teste.bo.Validador;
+import rs.com.teste.exception.ErrorValidacao;
+import rs.com.teste.exception.ValidadorException;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.ValidationMessage;

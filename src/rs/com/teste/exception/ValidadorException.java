@@ -1,6 +1,5 @@
-package rs.com.teste.controller;
+package rs.com.teste.exception;
 
-import rs.com.teste.model.ErrorValidacao;
 
 public class ValidadorException extends Exception {
 
