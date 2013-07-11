@@ -3,6 +3,7 @@ package rs.com.teste.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import rs.com.teste.bo.Observador;
 import rs.com.teste.bo.Validador;
 import rs.com.teste.exception.ErrorValidacao;
 import rs.com.teste.exception.ValidadorException;
@@ -10,7 +11,7 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.ValidationMessage;
 
-public class BaseController {
+public class BaseController implements  Observador{
 
 	private Validator validator;
 	protected Result result;	
@@ -61,5 +62,10 @@ public class BaseController {
 			result.include("errorFields", errorFieldsList);
 		}
 		errorFieldsList.add(errorField);
+	}
+
+
+	public void executar(List<ErrorValidacao> errorValidacao) {
+		this.gerarValidacoes(errorValidacao);
 	}
 }
